@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Styling-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+    <title>Kathiawar Stores</title>
+</head>
+<body>
+    
+<div class="back">
+	<div class="container">
+		<h1 class="badge">Our store</h1>
+	</div>
+</div>
+<br/>
+
+<div class="backcolor">
+    <div class="map">
+        <div class ="container">
+        <!--JUBILEE HILLS -->
+    	    <div class="row">
+                <div class="col-sm-6 justify-content-center" >
+                    <h2 class="h2">JUBILEE HILLS</h2>
+                    <p class="address">Road No.36, Jubilee Hills,<br>
+                    Hyderabad, Telangana-500033.<br>
+                    <a href="tel:+91 040 6704 3636" class="tel">Phone: +91 040 6704 3636</a> <br>
+                    11:00 am - 9:00 pm (Monday to Sunday)</p>
+                    <div id="map"></div>
+                </div>
+            <!--ABIDS-->
+                <div class="col-sm-6">
+                    <h2 class="h2">ABIDS</h2>
+                    <p class="address">Main Road, Abids,<br>
+                    Hyderabad, Telangana-500001.<br>
+                    <a href="tel:+91 040 6656 6234" class="tel">Phone: +91 040 6656 6234</a> <br>
+                    11:00 am - 9:00 pm (Monday to Sunday)</p>
+                    <div id="map1"></div>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+            <!--SECUNDERABAD-->
+                <div class="col-sm-6">
+                    <h2 class="h2">SECUNDERABAD</h2>
+                    <p class="address">Gandhi Statue Square.<br>
+                    Secunderabad, Telangana-500003.<br>
+                    <a href="tel:+91 040 2784 6188" class="tel">Phone: +91 040 2784 6188</a><br>
+                    11:00 am - 9:00 pm (Monday to Sunday)</p>
+                    <div id="map2"></div>
+                </div>
+
+            <!--KS BEAUTY CENTRE-->
+                <div class="col-sm-6" >
+                    <h2 class="h2">KS BEAUTY CENTRE</h2>
+                    <p class="address">Kathiawar Plaza, P.G. Road,<br>
+                    Secunderabad, Telangana – 500003.<br>
+                    <a href="tel:+91 040 66381555" class="tel">Phone: +91 040 66381555</a><br>
+                    11:00 am - 8:30 pm (Monday to Sunday)</p>
+                    <div id="map3"></div>
+                </div>
+            </div>
+	           <br/>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<br/>
+<div class="below">
+    <div class="container">
+	    <div class="row">
+            <!--col-1-->
+	        <div class="col-md-2">
+		        <div class="row">
+			        <div class="col-md-6">
+				        <img class="credit" src="img/l1.png"  />
+			        </div>
+			        <div class="col-md-6 fot1">
+				        <span id="break">Safety and secrued</span> Payment Gateway.
+                        <div class="v"></div>
+			        </div>
+		        </div>
+	        </div>
+            <!--col-2-->
+	        <div class="col-md-2">
+		        <div class="row">
+			        <div class="col-md-6 ">
+				        <img class="gurantee" src="img/l2.png"  />
+			        </div>
+			        <div class="col-md-6 fot2">
+			            <span id="break">Genunine Products</span> Guranteed
+			            <div class="v"></div>
+		            </div>
+		        </div>
+	        </div>
+            <!--col-3-->
+	        <div class="col-md-3">
+		        <div class="row">
+			         <div class="col-md-4">
+				        <img class="delivery" src="img/l3.png" />
+		          	</div>
+			        <div class="col-md-7 fot3">
+	                   	<span id="break">Free shipping for orders</span> over Rs.749
+                        <div class="v"></div>
+                    </div>	
+                </div>
+	        </div>
+            <!--col-4-->
+	       <div class="col-md-5 ne" >
+                <div class="h"></div>
+		        <b class="ne">KEEP UPDATED & UNLIMITED OFFERS</b>
+	            <input type="text"  placeholder="Your email address"><button type="submit"  >Subscribe</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+<script>
+        /*map*/
+        var map = L.map('map').setView([17.4326, 78.4071], 12);
+        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=sTrxCORMW75JOHc0dhL2', {
+            attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a   href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        }).addTo(map);
+        var marker=L.marker([17.4326, 78.4071]).addTo(map);
+</script>
+<script>
+        /*map 1*/    
+        var map1 = L.map('map1').setView([17.3930, 78.4730], 12);
+        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=sTrxCORMW75JOHc0dhL2', {
+            attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a   href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        }).addTo(map1);
+        var marker1=L.marker([17.3930, 78.4730]).addTo(map1);
+</script>
+<script>
+        /*map 2*/
+        var map2 = L.map('map2').setView([17.4399, 78.4983], 12);
+        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=sTrxCORMW75JOHc0dhL2', {
+            attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        }).addTo(map2);
+        var marker=L.marker([17.4399, 78.4983]).addTo(map2);
+</script>
+<script>
+        /*map 3*/
+        var map3 = L.map('map3').setView([17.4399, 78.4983], 12);
+        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=sTrxCORMW75JOHc0dhL2', {
+            attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        }).addTo(map3);
+        var marker3=L.marker([17.4403, 78.4852]).addTo(map3);
+</script>
+
+</body>
+
+</html>
